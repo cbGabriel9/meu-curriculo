@@ -252,12 +252,19 @@ canvas {
 
 /* ---------------------------------------------------------
    10. FORMULÁRIO DE CONTATO
+   Toda a seção de contato fica centralizada na página.
    --------------------------------------------------------- */
+#contato {
+    text-align: center;
+}
+
+/* "margin: 0 auto" centraliza o formulário dentro da seção */
 form {
     display: flex;
     flex-direction: column;
     max-width: 400px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    text-align: left;   /* os rótulos continuam alinhados à esquerda */
 }
 
 label {
@@ -288,6 +295,7 @@ input:focus {
 
 .redes {
     display: flex;
+    justify-content: center;   /* centraliza os links das redes */
     list-style: none;
     gap: 20px;
     flex-wrap: wrap;
