@@ -94,7 +94,7 @@ var ctx = canvas.getContext("2d");
 
 // Nome de cada habilidade e o nível dela (de 0 a 100)
 var habilidades = ["Python", "React", "SQL", "Docker", "PHP"];
-var niveis = [90, 80, 80, 70, 65];
+var niveis = [70, 40, 40, 50, 50];
 
 var larguraBarra = 40;   // largura de cada barra
 var espaco = 25;         // espaço entre as barras
