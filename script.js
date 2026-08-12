@@ -92,9 +92,21 @@ document.getElementById("contador").innerText = visitas;
 var canvas = document.getElementById("grafico");
 var ctx = canvas.getContext("2d");
 
-// Nome de cada habilidade e o nível dela (de 0 a 100)
-var habilidades = ["Python", "React", "SQL", "Docker", "PHP"];
-var niveis = [70, 40, 40, 50, 50];
+// Cada habilidade com o seu nível (de 0 a 100)
+var habilidades = [
+    { nome: "Python", nivel: 70 },
+    { nome: "React",  nivel: 40 },
+    { nome: "SQL",    nivel: 40 },
+    { nome: "Docker", nivel: 50 },
+    { nome: "PHP",    nivel: 50 }
+];
+
+// Coloca as barras em ordem, do maior nível para o menor.
+// Como a ordenação é feita aqui, basta mudar o "nivel" acima
+// que o gráfico se reorganiza sozinho.
+habilidades.sort(function (a, b) {
+    return b.nivel - a.nivel;
+});
 
 var larguraBarra = 40;   // largura de cada barra
 var espaco = 25;         // espaço entre as barras
@@ -111,7 +123,7 @@ ctx.stroke();
 for (var i = 0; i < habilidades.length; i++) {
 
     var x = 35 + i * (larguraBarra + espaco);
-    var altura = niveis[i] * 1.5;   // multiplico para a barra ficar maior
+    var altura = habilidades[i].nivel * 1.5;   // multiplico para a barra ficar maior
 
     // Barra colorida
     ctx.fillStyle = "#22d3ee";
@@ -121,9 +133,9 @@ for (var i = 0; i < habilidades.length; i++) {
     ctx.fillStyle = "#e2e8f0";
     ctx.font = "12px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(niveis[i] + "%", x + larguraBarra / 2, baseY - altura - 8);
+    ctx.fillText(habilidades[i].nivel + "%", x + larguraBarra / 2, baseY - altura - 8);
 
     // Nome da habilidade abaixo da barra
     ctx.fillStyle = "#94a3b8";
-    ctx.fillText(habilidades[i], x + larguraBarra / 2, baseY + 18);
+    ctx.fillText(habilidades[i].nome, x + larguraBarra / 2, baseY + 18);
 }
