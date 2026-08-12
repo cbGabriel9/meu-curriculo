@@ -80,35 +80,44 @@ nav {
 }
 
 .logo {
-    font-family: "Courier New", monospace;
+    font-family: "Courier New", Courier, monospace;
     font-size: 1.3rem;
     font-weight: bold;
     color: var(--roxo);
+    letter-spacing: 1px;
 }
 
 /* A lista do menu também é flexbox, para os itens ficarem em linha */
 .menu {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
+/* Os links do menu usam a mesma fonte monoespaçada do logo */
 .menu a {
-    padding: 5px 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 8px 14px;
+    border: 1px solid transparent;
     border-radius: 6px;
 }
 
 .menu a:hover {
     background-color: var(--fundo);
+    border-color: var(--ciano);
+    color: var(--ciano);
     text-decoration: none;
 }
 
 /* Saudação que o JavaScript altera */
 .saudacao {
+    font-family: "Courier New", Courier, monospace;
     margin-top: 15px;
     color: var(--texto-fraco);
-    font-style: italic;
 }
 
 
@@ -332,13 +341,35 @@ footer {
    --------------------------------------------------------- */
 @media (max-width: 600px) {
 
+    /* No celular o logo fica em cima e o menu embaixo, ambos centralizados */
     nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        gap: 14px;
     }
 
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    /* Os itens viram "botões" que se distribuem em duas linhas */
     .menu {
-        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .menu a {
+        display: block;
+        background-color: var(--fundo);
+        border-color: var(--borda);
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+
+    .saudacao {
+        text-align: center;
+        margin-top: 5px;
     }
 
     .sobre,
