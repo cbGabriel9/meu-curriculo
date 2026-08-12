@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Foto de perfil ilustrativa">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#131a2a"/>
+      <stop offset="100%" stop-color="#1b2740"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg)"/>
+
+  <!-- grade decorativa de fundo -->
+  <g stroke="#22d3ee" stroke-opacity="0.10" stroke-width="1">
+    <path d="M0 50H400M0 100H400M0 150H400M0 200H400M0 250H400M0 300H400M0 350H400"/>
+    <path d="M50 0V400M100 0V400M150 0V400M200 0V400M250 0V400M300 0V400M350 0V400"/>
+  </g>
+
+  <!-- silhueta -->
+  <circle cx="200" cy="158" r="62" fill="url(#neon)" opacity="0.9"/>
+  <path d="M92 340c0-59 48-107 108-107s108 48 108 107z" fill="url(#neon)" opacity="0.9"/>
+
+  <!-- moldura -->
+  <rect x="12" y="12" width="376" height="376" fill="none" stroke="url(#neon)" stroke-width="3" rx="24"/>
+</svg>

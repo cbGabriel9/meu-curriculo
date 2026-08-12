@@ -1,0 +1,346 @@
+/* =========================================================
+   CURRÍCULO ONLINE - FOLHA DE ESTILO
+   Gabriel Ceron Bianchi - Programação 4
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. VARIÁVEIS DE COR
+   Guardo as cores aqui para reaproveitar no arquivo todo.
+   --------------------------------------------------------- */
+:root {
+    --fundo: #0f172a;          /* azul bem escuro */
+    --fundo-caixa: #1a2337;    /* fundo dos cartões */
+    --borda: #2b3a55;
+    --texto: #e2e8f0;
+    --texto-fraco: #94a3b8;
+    --ciano: #22d3ee;
+    --roxo: #a855f7;
+}
+
+
+/* ---------------------------------------------------------
+   2. RESET E ESTILOS GERAIS
+   --------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--ciano);
+    margin-bottom: 10px;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.1rem; }
+
+a {
+    color: var(--ciano);
+    text-decoration: none;
+}
+
+/* Efeito hover simples nos links */
+a:hover {
+    color: var(--roxo);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   3. CABEÇALHO E MENU (Flexbox)
+   --------------------------------------------------------- */
+header {
+    background-color: var(--fundo-caixa);
+    border-bottom: 2px solid var(--ciano);
+    padding: 20px;
+}
+
+/* O nav usa flexbox para deixar o logo e o menu lado a lado */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-family: "Courier New", monospace;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--roxo);
+}
+
+/* A lista do menu também é flexbox, para os itens ficarem em linha */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.menu a:hover {
+    background-color: var(--fundo);
+    text-decoration: none;
+}
+
+/* Saudação que o JavaScript altera */
+.saudacao {
+    margin-top: 15px;
+    color: var(--texto-fraco);
+    font-style: italic;
+}
+
+
+/* ---------------------------------------------------------
+   4. ÁREA PRINCIPAL E SEÇÕES
+   --------------------------------------------------------- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+section {
+    background-color: var(--fundo-caixa);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+
+/* ---------------------------------------------------------
+   5. SEÇÃO SOBRE (foto e texto lado a lado com Flexbox)
+   --------------------------------------------------------- */
+.sobre {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.sobre figure {
+    text-align: center;
+}
+
+.sobre figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--texto-fraco);
+}
+
+/* flex: 1 faz o texto ocupar o espaço que sobrar ao lado da foto */
+.sobre-texto {
+    flex: 1;
+    min-width: 260px;
+}
+
+.cargo {
+    color: var(--roxo);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* ---------------------------------------------------------
+   6. BOTÕES
+   --------------------------------------------------------- */
+button {
+    background-color: var(--ciano);
+    color: var(--fundo);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    margin: 12px 8px 0 0;
+    cursor: pointer;
+}
+
+/* Efeito hover nos botões */
+button:hover {
+    background-color: var(--roxo);
+    color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   7. SEÇÃO ESCONDIDA (mostrada/escondida pelo JavaScript)
+   --------------------------------------------------------- */
+.escondido {
+    display: none;
+}
+
+.detalhes ul {
+    margin-left: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   8. HABILIDADES (lista e gráfico lado a lado)
+   --------------------------------------------------------- */
+.habilidades-conteudo {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.lista-habilidades {
+    flex: 1;
+    min-width: 240px;
+    list-style: none;
+}
+
+.lista-habilidades li {
+    background-color: var(--fundo);
+    border-left: 4px solid var(--ciano);
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+.grafico figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--texto-fraco);
+    text-align: center;
+}
+
+canvas {
+    background-color: var(--fundo);
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   9. FORMAÇÃO E EXPERIÊNCIA
+   --------------------------------------------------------- */
+#formacao article {
+    border-left: 4px solid var(--roxo);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.periodo {
+    font-size: 0.9rem;
+    color: var(--texto-fraco);
+}
+
+
+/* ---------------------------------------------------------
+   10. FORMULÁRIO DE CONTATO
+   --------------------------------------------------------- */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+input {
+    background-color: var(--fundo);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: 2px solid var(--ciano);
+}
+
+/* Mensagem escrita pelo JavaScript depois do envio */
+.retorno {
+    color: var(--ciano);
+    font-weight: bold;
+    min-height: 24px;
+}
+
+.redes {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+
+/* ---------------------------------------------------------
+   11. RODAPÉ
+   --------------------------------------------------------- */
+footer {
+    background-color: var(--fundo-caixa);
+    border-top: 2px solid var(--roxo);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: var(--texto-fraco);
+}
+
+
+/* ---------------------------------------------------------
+   12. RESPONSIVIDADE (celulares até 600px)
+   Aqui as seções em flexbox passam a ficar uma embaixo da outra.
+   --------------------------------------------------------- */
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .sobre,
+    .habilidades-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .lista-habilidades {
+        text-align: left;
+    }
+
+    h1 { font-size: 1.6rem; }
+
+    button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    form {
+        max-width: 100%;
+    }
+}

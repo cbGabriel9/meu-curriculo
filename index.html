@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currículo online de Gabriel Ceron Bianchi, estudante de Ciência da Computação.">
+    <title>Currículo | Gabriel Ceron Bianchi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== CABEÇALHO E MENU ===== -->
+    <header>
+        <nav>
+            <span class="logo">&lt;gabriel /&gt;</span>
+            <ul class="menu">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Área onde o JavaScript escreve a saudação personalizada -->
+        <p id="saudacao" class="saudacao">Olá, visitante!</p>
+    </header>
+
+    <main>
+
+        <!-- ===== SEÇÃO SOBRE ===== -->
+        <section id="sobre" class="sobre">
+            <figure>
+                <img src="media/foto.svg" alt="Foto de perfil de Gabriel Ceron Bianchi" width="220" height="220">
+                <figcaption>Gabriel Ceron Bianchi</figcaption>
+            </figure>
+
+            <div class="sobre-texto">
+                <h1>Gabriel Ceron Bianchi</h1>
+                <p class="cargo">Estudante de Ciência da Computação</p>
+                <p>
+                    Tenho 20 anos, moro em São Paulo e estudo desenvolvimento web.
+                    Gosto de criar interfaces simples, organizadas e que funcionem bem
+                    em qualquer tela. No momento estudo HTML, CSS e JavaScript.
+                </p>
+
+                <!-- Botões que ativam as funções do script.js -->
+                <button id="btnBoasVindas" type="button">Clique para uma mensagem</button>
+                <button id="btnDetalhes" type="button">Mostrar mais sobre mim</button>
+            </div>
+        </section>
+
+        <!-- Seção escondida que aparece ao clicar no botão "Mostrar mais sobre mim" -->
+        <section id="detalhes" class="detalhes escondido">
+            <h2>Um pouco mais sobre mim</h2>
+            <ul>
+                <li>Aprendi programação sozinho antes de entrar na faculdade.</li>
+                <li>Gosto de jogos, música e de montar computadores.</li>
+                <li>Estou procurando meu primeiro estágio na área de tecnologia.</li>
+            </ul>
+        </section>
+
+        <!-- ===== SEÇÃO HABILIDADES ===== -->
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+
+            <div class="habilidades-conteudo">
+                <ul class="lista-habilidades">
+                    <li>HTML5 — estruturação semântica</li>
+                    <li>CSS3 — Flexbox e responsividade</li>
+                    <li>JavaScript — lógica e interatividade</li>
+                    <li>Git e GitHub — versionamento</li>
+                    <li>Python — introdução à programação</li>
+                </ul>
+
+                <!-- Canvas: gráfico de barras desenhado pelo JavaScript -->
+                <figure class="grafico">
+                    <canvas id="grafico" width="360" height="220">
+                        Gráfico de barras com meu nível em HTML, CSS, JavaScript e Python.
+                    </canvas>
+                    <figcaption>Meu nível atual em cada tecnologia (%)</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ===== SEÇÃO FORMAÇÃO E EXPERIÊNCIA ===== -->
+        <section id="formacao">
+            <h2>Formação e experiência</h2>
+
+            <article>
+                <h3>Ciência da Computação</h3>
+                <p class="periodo">2024 — cursando</p>
+                <p>Graduação com foco em programação, algoritmos e desenvolvimento web.</p>
+            </article>
+
+            <article>
+                <h3>Curso de Desenvolvimento Web</h3>
+                <p class="periodo">2023</p>
+                <p>Curso online de 60 horas sobre HTML, CSS e JavaScript básico.</p>
+            </article>
+
+            <article>
+                <h3>Monitor de laboratório de informática</h3>
+                <p class="periodo">2023 — 2024</p>
+                <p>Ajudei outros alunos com dúvidas de programação e manutenção dos computadores.</p>
+            </article>
+        </section>
+
+        <!-- ===== SEÇÃO CONTATO ===== -->
+        <section id="contato">
+            <h2>Contato</h2>
+
+            <!-- Formulário: o JavaScript pega o nome digitado e mostra no topo da página -->
+            <form id="formContato">
+                <label for="nome">Seu nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <label for="email">Seu e-mail:</label>
+                <input type="email" id="email" name="email" placeholder="voce@email.com" required>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <!-- Mensagem de retorno escrita pelo JavaScript -->
+            <p id="retorno" class="retorno"></p>
+
+            <h3>Minhas redes</h3>
+            <ul class="redes">
+                <li><a href="mailto:g.ceronbianchi@gmail.com">E-mail</a></li>
+                <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- ===== RODAPÉ ===== -->
+    <footer>
+        <p>Feito por Gabriel Ceron Bianchi — Programação 4 (Unidade I)</p>
+        <!-- Contador de visitas guardado no localStorage pelo JavaScript -->
+        <p>Você visitou esta página <span id="contador">0</span> vez(es).</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
