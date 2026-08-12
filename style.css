@@ -238,6 +238,7 @@ canvas {
 /* ---------------------------------------------------------
    9. FORMAÇÃO E EXPERIÊNCIA
    --------------------------------------------------------- */
+#projetos article,
 #formacao article {
     border-left: 4px solid var(--roxo);
     padding-left: 15px;

@@ -21,6 +21,9 @@ meu-curriculo/
 links `<a>` (e-mail, GitHub, LinkedIn), imagem com `alt` e `<figcaption>`, e
 formulário com campos de nome e e-mail.
 
+Seções: sobre, detalhes (oculta), habilidades, projetos, formação e
+experiência, e contato.
+
 **CSS3:** arquivo externo comentado e dividido em seções, layout com **Flexbox**
 (menu, seção "sobre", habilidades, formulário), cores e fontes personalizadas,
 efeitos `:hover` em links e botões, e responsividade com `@media (max-width: 600px)`.

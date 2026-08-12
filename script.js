@@ -93,11 +93,11 @@ var canvas = document.getElementById("grafico");
 var ctx = canvas.getContext("2d");
 
 // Nome de cada habilidade e o nível dela (de 0 a 100)
-var habilidades = ["HTML", "CSS", "JS", "Python"];
-var niveis = [90, 80, 65, 55];
+var habilidades = ["Python", "React", "SQL", "Docker", "PHP"];
+var niveis = [90, 80, 80, 70, 65];
 
-var larguraBarra = 50;   // largura de cada barra
-var espaco = 35;         // espaço entre as barras
+var larguraBarra = 40;   // largura de cada barra
+var espaco = 25;         // espaço entre as barras
 var baseY = 180;         // altura onde as barras começam
 
 // Desenha a linha da base do gráfico
