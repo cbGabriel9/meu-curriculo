@@ -2,6 +2,8 @@
 
 Página web estática e interativa feita para a **Unidade I de Programação 4**.
 
+**Página publicada:** https://meu-curriculo-bay-tau.vercel.app/
+
 ## Arquivos
 
 ```
