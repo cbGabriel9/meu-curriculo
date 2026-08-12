@@ -144,6 +144,15 @@ section {
     text-align: center;
 }
 
+/* object-fit: cover recorta a foto no quadrado sem achatar a imagem */
+.sobre img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 3px solid var(--ciano);
+    border-radius: 50%;
+}
+
 .sobre figcaption {
     margin-top: 8px;
     font-size: 0.9rem;
